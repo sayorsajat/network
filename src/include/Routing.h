@@ -2,13 +2,19 @@
 #define ROUTING_H
 
 #include <string>
+#include <vector>
 
 class Router {
     public:
-        //Router();
-        void printToTest();
+        Router();
+
+        void pushMessageTo(std::string message);
     private:
-        std::string binaryToString();
+        std::vector<std::string> messagesBuff;
+        
+        std::string binaryToString(std::string & input);
+
+        void handlePacket();
 };
 
 #endif

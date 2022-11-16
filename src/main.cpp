@@ -1,7 +1,11 @@
 #include "include/Routing.h"
+#include "include/messagesPassing.h"
 
 int main() {
-    Router rout1;
-    rout1.printToTest();
+    Router router;
+    Obj firstObj = Obj("first");
+
+
+    firstObj.passMessageTo(router, "first", "msg body", "basic", true);
     return 0;
 }
