@@ -1,13 +1,9 @@
 #ifndef OBJ_RELATED
 #define OBJ_RELATED
+class Router;
 #include <string>
 #include <memory>
 #include "Routing.h"
-
-
-
-
-
 
 class Message {
     public:
@@ -20,7 +16,7 @@ class Obj {
 	public:
         std::string messageSourceHostID;
         
-        Obj(std::string ID);
+        Obj(Router & router, std::string ID);
 
         void passMessageTo(Router router, std::string destObjId, std::string messageBody, std::string messageStatus = "basic", bool provideSrcHost = false);
     private:
