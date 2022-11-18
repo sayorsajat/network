@@ -17,6 +17,8 @@ class Router {
         
         std::string binaryToString(std::string & input);
 
+        Obj* getObjectWithID(std::string ID);
+
         void handlePacket();
 };
 
