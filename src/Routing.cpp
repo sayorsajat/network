@@ -53,6 +53,8 @@ void Router::handlePacket() {
         messageSignature.body = mBody;
         messageSignature.topic = mTopic;
         messageSignature.src_host = host;
+
+        destinationHost->receiveMessage(messageSignature);
     }
 };
 
